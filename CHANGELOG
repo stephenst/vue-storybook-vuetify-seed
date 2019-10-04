@@ -6,11 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Added Continious Integration Pipeline yml
+### Changed
+### Removed
+
+## [v1.0.0] released 10/4/2019
+### Added
+- Added Ability to publish to GH Pages [#1](https://github.com/stephenst/vue-storybook-vuetify-seed/issues/1)
+- Added Continious Integration Pipeline yml [#1](https://github.com/stephenst/vue-storybook-vuetify-seed/issues/1)
 - Added StyleGuide to build and serve process
 - Added in baseline Gauge Chart
 ### Changed
 - Updated Storybook to 5.1.11
 - Updated Storybook Knobs to configure charts. 
 - Updated Documentation on how to reach and modify all 3 sites
-### Removed

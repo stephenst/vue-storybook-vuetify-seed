@@ -1,4 +1,4 @@
-# Vue-Storybook-Vuetify-seed
+# Vue-Storybook-Vuetify-seed [![Build Status](https://travis-ci.org/stephenst/vue-storybook-vuetify-seed.svg?branch=master)](https://travis-ci.org/stephenst/vue-storybook-vuetify-seed)
 
 This is a Storybook setup using Vue, Vuetify 2, and Storybook all together.  It was a giant pain to get running; so sharing this seed to modify and base off of.
 
