@@ -1,5 +1,20 @@
 language: node_js
 node_js:
-  - "12"
-after_success:
-  - .travis/push.sh
+- '12'
+before_script:
+- npm run build-storybook
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: "$GITHUB_TOKEN"
+  keep_history: true
+  local_dir: storybook-static
+  repo: stephenst/vue-storybook-vuetify-seed
+  target_branch: gh-pages
+  verbose: true
+  # on:
+  #   branch: master
+env:
+  global:
+  - secure: fXOE7MC98ptXgy9FXZaCll6+seuXhKtcjvjLkFUznAWqxuk1qZKz9TQxj57f4rmY8dUnKG0ZBPFapshKMHSGeN0oKDUJ3YTxr+9woPN7vIis5L8VKwUVHNPYXPYeTQ6nG5FwrZsrMfFeXZyyzo2ZEl6BIIYF0b3ZcugGqsxqYTAHPOtpRYOF55A9Pg+oO6C2cX2rVupl7p0sa8YyVcaGSWvakpukT+1dHLwFyOo9pAP4bp1zUEF8ta+kQNMl/OSsHvOcy/0yI1URMGdtKQxj2aNatW3RIiQrzfRhezRnGEevgLgR2m/ukLvtise5jvYiGOy6/Tt2fLJpJ3Q2j8ukIcEmFprYiOKQ7pTYIdmR2oozByX5+bfLlmhKD+Haz28mOycxx3mi37KrKAPDtULNhrVf/smdZa6LIVDxXojUsNHVh/VY9tA+BBg9vGP5y639b4bjq6J/CG0u6EAIXSkNEo/9VJwlOlMl+tSk3NpOkHeVSOp3dCln+MioGJy2/bN9SpMnTWepVKlPdhYWZiK7kGM/RcD6nBozpmCdMz5H9TxrWI1gRaKfx1eFiPGd4TUmUHw7RlYdVBWWAXEZkuQaXYXrBdSBqkT61ZUGgEVsVAfTCUhy3mmkblQgNl6/kERULZu9Kr0ZRFd2ZNYA1pdMDpQXl1Qx201qkwboiWGdAwo=
+  - secure: B33HW6lNWSJYFvKwuQ6uFQP1G9v/O9rZtjcedpAhk7qtgv6tI0MpSJzlgXxahvX0rVZu106oPIfr1QxEdsf7oa8ZNV6goREEA+mEko+hsHsK8FkcT67l4iNV4nyWzCrSGFm+rrfvxMHo60+RXgBUEqbmYQ8OMgZdfwqS0RNI03L++I1RvFksgJYVwDkpelHjAPIv7JpLbU3yrrMK8+o1jtb1MlNN4iZ6fQSO433hOrkax+1nh9mDOFSumZ0jMq62tl/goJbgiaRZiudpXYEmxbQEKsTlPOsniDTchflm72nG0jKyxJU6tyUJUyMjnr850UhWimCeKWUKvhlrJduD/VWEJP5IdnubdYXs35GpQurAc77Itk8qiLQQpcR1Uqc59JaTq5ldLI/uUkrHNEIj1B1nRV58Vw32mkF/gdCrWJgPHF8RPGoeSAWqrRpEehcbH6sDWzjFoSGk4QMOcDQ8mvZtNm9kRh6TVGVnK/qhxBo+zXCCAhenM343tIupU1jRIAB4PzRdFRLiVJJnkTg0OmAElDueZOYwIoPBl388U5adqnc4n6gmpKLzOwAJ6BOg73jmB+uL8zWnBKFgdlLN2QliT0gdAjxIS9CH9P2dKiLe+9sx9Tb+o6/MuyF6+CL8CEZjLHxc3mQmlZeqOWL3ETE22SMZiAkmn5yqGEjAMWA=

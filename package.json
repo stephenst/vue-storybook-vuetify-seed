@@ -6,8 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build-storybook": "build-storybook",
-    "storybook": "start-storybook -p 6006"
+    "build-storybook": "build-storybook -s public",
+    "storybook": "start-storybook -p 6006",
+    "test": ""
   },
   "dependencies": {
     "core-js": "^2.6.5",
