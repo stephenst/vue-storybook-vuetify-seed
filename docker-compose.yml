@@ -1,0 +1,13 @@
+version: "3"
+services:
+  ui:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: bash -c "npm rebuild node-sass && vue ui --host 0.0.0.0 --port 8000 --headless & npm run storybook & npm run styleguide"
+    volumes:
+      - .:/ui
+    ports:
+      - 8000:8000
+      - 8080:8080
+      - 6006:6006

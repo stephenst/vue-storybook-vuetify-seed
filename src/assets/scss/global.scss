@@ -1,0 +1,305 @@
+@import "./patterns.scss";
+
+// browns
+$brown_1: #603A0B; // secondary
+$brown_2: #AD5700; // primary
+$brown_3: #EFAB66; // info
+
+// acid green
+$acid_green: #3CFF96; // accent
+
+// pinks
+$pink_1: #E200FF; // error?
+$pink_2: #E966EF; // warning
+$pink_3: #E89EEB; // success
+
+// grays, dark to light
+$dark_gray_1: #2E3440;
+$dark_gray_2: #3E424A;
+$dark_gray_3: #4C566A;
+$gray_1: #747880;
+$gray_2: #7F8187;
+$gray_3: #AAABAF;
+$light_gray_1: #B7B8B6;
+$light_gray_2: #CFD5CA;
+$light_gray_3: #ECF2E7;
+
+$combat: $brown_2;
+
+$primary: $brown_2;
+$secondary: #303030;
+$info: $brown_3;
+$accent: $acid_green;
+$warning: $pink_2;
+$error: $pink_1;
+
+// Stoplight, Green, Yellow, Red
+$stoplight_green: #3D8336;
+$stoplight_yellow: #D4E310;
+$stoplight_red: #801f39;
+// lighter
+$stoplight_green_lighter: #6FB98F;
+$stoplight_yellow_lighter: #E5E2A0;
+$stoplight_red_lighter: #FB427B;
+
+// Red/Blue Team
+$blue_team: #3179ED;
+$red_team: #F50909;
+
+.blue_team {
+  background-color: $blue_team;
+}
+.red_team {
+  background-color: $red_team;
+}
+
+.theme--dark {
+  background-color: #303030;
+  color: #fff;
+
+  app-bar {
+    color: #1f1d1c;
+  };
+  cards {
+    color: #424242;
+  };
+  theme {
+    color: #fff;
+  };
+  primary {
+    color: #fff;
+  };
+  secondary {
+    color: rgba(#fff, .70);
+  };
+  disabled {
+    color: rgba(#fff, .50);
+  };
+  a {
+    color: $pink_2;
+    font-weight: bolder;
+
+    &.brand {
+      color: $info;
+    }
+  };
+  a:hover {
+    color: $pink_1;
+  };
+
+  &.v-chip {
+    border: 1px solid lighten($brown_1, 13%) !important;
+    color: $dark_gray_2 !important;
+
+    // BLUE SIDE
+    &.blue {
+      border: 1px solid darken($blue_team, 13%) !important;
+      color: darken($blue_team, 3%) !important;
+
+      strong.subheading {
+        background-color: lighten($blue_team, 3%);
+        color: white;
+      }
+    }
+
+    &.red {
+      border: 1px solid darken($red_team, 13%) !important;
+      color: $red_team !important;
+
+      strong.subheading {
+        background-color: lighten($red_team, 33%);
+      }
+    }
+    .v-chip__content {
+      color: #fff;
+    }
+    span.caption {
+      border-right: 1px solid lighten($brown_1, 13%) !important;
+      color: lighten($brown_2, 23%);
+      line-height: 36px;
+      padding: 0 12px;
+      margin-left: -12px;
+      vertical-align: middle;
+    }
+    strong.subheading {
+      background-color: darken($brown_2, 23%);
+      color: $light_gray_3;
+      line-height: 36px;
+      padding: 0 12px;
+      margin-right: -12px;
+      vertical-align: middle;
+    }
+  }
+  .v-overlay {
+    opacity: 0.625
+  }
+  .v-data-footer {
+    .v-btn--fab.v-size--default {
+      height: auto;
+      width: auto;
+    }
+  }
+}
+
+.v-dialog__content--active {
+  z-index: 1000001;
+}
+.menuable__content__active {
+  z-index: 1000003;
+}
+
+.v-chip.accent {
+  border: 1px solid lighten($acid_green, 43%) !important;
+  color: $acid_green !important;
+
+  span.caption {
+    border-right: 1px solid lighten($acid_green, 43%);
+  }
+  strong.subheading {
+    background-color: lighten($acid_green, 33%);
+  }
+
+}
+
+.v-chip {
+  margin: 5px;
+  background-color: transparent;
+  border-color: lighten($gray_1, 33%);
+  border: 1px solid lighten($gray_1, 43%);
+  color: $gray_1;
+
+  span.caption {
+    border-right: 1px solid lighten($gray_1, 43%);
+    line-height: 36px;
+    padding: 0 12px;
+    margin-left: -12px;
+    vertical-align: middle;
+  }
+  strong.subheading {
+    background-color: lighten($gray_1, 33%);
+    line-height: 36px;
+    padding: 0 12px;
+    margin-right: -12px;
+    vertical-align: middle;
+  }
+}
+.v-chip.accent {
+  border: 1px solid lighten($acid_green, 43%) !important;
+  color: $acid_green !important;
+
+  span.caption {
+    border-right: 1px solid lighten($acid_green, 43%);
+  }
+  strong.subheading {
+    background-color: lighten($acid_green, 33%);
+  }
+
+  // BLUE SIDE
+  &.blue {
+    border: 1px solid darken($blue_team, 13%) !important;
+    color: darken($blue_team, 3%) !important;
+
+    strong.subheading {
+      background-color: lighten($blue_team, 3%);
+      color: white;
+    }
+  }
+
+  &.red {
+    border: 1px solid lighten($red_team, 43%) !important;
+    color: $red_team !important;
+
+    strong.subheading {
+      background-color: lighten($red_team, 33%);
+    }
+  }
+}
+.v-chip.primary {
+  border: 1px solid lighten($pink_1, 13%) !important;
+  color: $pink_3 !important;
+
+  span.caption {
+    border-right: 1px solid lighten($pink_1, 13%);
+  }
+  strong.subheading {
+    background-color: lighten($pink_1, 8%);
+  }
+}
+
+.bg--transparent {
+  background: transparent !important;
+}
+
+
+  //  status-bar: {
+  //    regular: #000000,
+  //    lights-out: rgba(#000, .2)
+  //  },
+  //  chips: {
+  //    background: #555,
+  //    color: #fff
+  //  },
+  //  dividers: rgba(#fff, .12),
+  //  icons: {
+  //    active: #fff,
+  //    inactive: rgba(#fff, .5)
+  //  },
+  //  inputs: {
+  //    box: #fff,
+  //    solo-inverted: rgba(#fff, .16),
+  //    solo-inverted-focused: #fff,
+  //    solo-inverted-focused-text: $material-light.text.primary
+  //  },
+  //  list-tile: {
+  //    hover: rgba(#fff, .08)
+  //  },
+  //  buttons: {
+  //    disabled: rgba(#fff, .3),
+  //    focused: rgba(#fff, .12),
+  //    focused-alt: rgba(#fff, .1),
+  //    pressed: rgba(#ccc, .25)
+  //  },
+  //  expansion-panels: {
+  //    focus: #494949
+  //  },
+  //  selection-controls: {
+  //    thumb: {
+  //      inactive: $grey.lighten-1,
+  //      disabled: $grey.darken-3
+  //    },
+  //    track: {
+  //      inactive: rgba(#fff, .3),
+  //      disabled: rgba(#fff, .1)
+  //    }
+  //  },
+  //  slider: {
+  //    active: rgba(#fff, .3),
+  //    inactive: rgba(#fff, .2),
+  //    disabled: rgba(#fff, .2),
+  //    discrete: #fff
+  //  },
+  //  tabs: {
+  //    active: #fff
+  //  },
+  //  text-fields: {
+  //    box: rgba(#000, .1),
+  //    box-hover: rgba(#000, .2),
+  //    box-focus: rgba(#000, .3)
+  //  },
+  //  input-bottom-line: rgba(#fff, .7),
+//  
+  //  stepper: {
+  //    active: rgba(#fff, 1),
+  //    completed: rgba(#fff, 0.87),
+  //    hover: rgba(#fff, 0.75)
+  //  },
+  //  table: {
+  //    active: #505050
+  //    hover: $grey.darken-2
+  //  },
+  //  picker: {
+  //    body: #424242,
+  //    clock: $grey.darken-2,
+  //    indeterminateTime: $grey.darken-1,
+  //    title: $grey.darken-2
+  //  },
