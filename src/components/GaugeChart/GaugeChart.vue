@@ -63,13 +63,13 @@ export default {
     }
   },
   mounted() {
-    this.drawChart();
+    this.$nextTick(() => this.drawChart());
   },
   methods: {
     drawChart() {
-      d3.select("#gaugeWrapper").html("");
+      d3.select("svg#gaugeWrapper").html("");
       this.gaugeChart({
-        el: "#gaugeWrapper",
+        el: "svg#gaugeWrapper",
         label: this.data.label,
         value: this.data.value,
         min: this.data.min,
@@ -86,7 +86,7 @@ export default {
      */
     gaugeChart(o) {
       const chart = d3.select(o.el);
-      const width = chart.attr("width");
+      const width = this.width;
       const center = width / 2;
       const outerBezelWidth = width * 0.009;
       const outerBezelRadius = center - outerBezelWidth;
